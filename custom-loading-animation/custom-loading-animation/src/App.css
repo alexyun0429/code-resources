@@ -1,0 +1,31 @@
+.loader {
+  position: relative;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(103, 27, 255),
+    transparent
+  );
+  overflow: hidden;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  translate: -200px 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+  animation: cool-loader 1s infinite;
+}
+
+@keyframes cool-loader {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
