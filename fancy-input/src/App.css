@@ -1,0 +1,35 @@
+.app {
+  background-color: black;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group-input {
+  background-color: transparent;
+  border: 0;
+  outline: none !important;
+  border-bottom: 2px solid rgba(256, 256, 256, 0.3);
+  color: #fff;
+  font-size: 16px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.input-group-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #650ff0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms;
+}
+
+.input-group-line:focus + .input-group-line,
+.input-group-input:not(:placeholder-shown) + .input-group-line {
+  transform: scaleX(1);
+}
